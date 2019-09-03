@@ -12,9 +12,9 @@ pipeline {
         
         stage ('Testing with Jasmine') {
            steps {
-               sh 'sudo su;npm install -g jasmine;'
+               sh 'npm install jasmine;'
                echo 'Hello'
-               sh 'jasmine'
+               sh 'node_modules/.bin/jasmine'
                  }
            }
       }
